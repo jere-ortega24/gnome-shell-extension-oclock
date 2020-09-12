@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="org.gnome.shell.extensions.oclock.clock-position">
+    <value value="0" nick="after"/>
+    <value value="1" nick="before"/>
+    <value value="2" nick="in-place"/>
+  </enum>
+  <schema
+      path="/org/gnome/shell/extensions/oclock/"
+      id="org.gnome.shell.extensions.oclock">
+    <key name="clock-position" enum="org.gnome.shell.extensions.oclock.clock-position">
+      <default>"in-place"</default>
+      <summary>Clock position</summary>
+      <description>Position to put the clock.</description>
+    </key>
+    <key type="i" name="extra-size">
+      <default>0</default>
+      <summary>Extra size</summary>
+      <description>Pixels to grow the clock. 0 is the same as other system icons.</description>
+    </key>
+    <key type="b" name="use-theme">
+      <default>true</default>
+      <summary>Use theme</summary>
+      <description>Use the colors from the installed theme.</description>
+    </key>
+    <key type="s" name="face-color">
+      <default>"#ffffff"</default>
+      <summary>Face color</summary>
+      <description>Color for the face of the clock.</description>
+    </key>
+    <key type="s" name="hour-color">
+      <default>"#ffffff"</default>
+      <summary>Hour hand color</summary>
+      <description>Color for the hour hand of the clock.</description>
+    </key>
+    <key type="s" name="minute-color">
+      <default>"#ffffff"</default>
+      <summary>Minute hand color</summary>
+      <description>Color for the minute hand of the clock.</description>
+    </key>
+    <key type="s" name="second-color">
+      <default>"#ffffff"</default>
+      <summary>Second hand color</summary>
+      <description>Color for the second hand of the clock.</description>
+    </key>
+    <key type="b" name="sweeping-motion">
+      <default>true</default>
+      <summary>Use sweeping motion</summary>
+      <description>Use sweeping motion for the hour and minute hands.</description>
+    </key>
+    <key type="b" name="show-label">
+      <default>true</default>
+      <summary>Show label on hover</summary>
+      <description>Show label on hover.</description>
+    </key>
+  </schema>
+</schemalist>

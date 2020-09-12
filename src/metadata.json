@@ -1,0 +1,11 @@
+{
+  "author": "Jeremias Ortega",
+  "description": "Shows an analog clock on the panel",
+  "name": "OClock",
+  "shell-version": [
+    "3.36"
+  ],
+  "url": "https://www.github.com/jere-ortega24/gnome-shell-extension-oclock/",
+  "uuid": "oclock@ortega.tech",
+  "version": 1
+}
