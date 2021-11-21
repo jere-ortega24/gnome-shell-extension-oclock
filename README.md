@@ -2,9 +2,13 @@
 This is a gnome shell extension to display an analog clock in the panel.
 
 ## Gnome-shell versions
-Currently only 3.36 is supported.
+* 40
+* 41
 
 ## Install
+### EGO (recommended)
+Get it from [extensions.gnome.org](https://extensions.gnome.org/extension/3578/oclock/).
+
 ### From source
 Run
 ```

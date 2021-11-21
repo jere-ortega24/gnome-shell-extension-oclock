@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
 <interface>
-  <requires lib="gtk+" version="3.6"/>
+  <requires lib="gtk" version="4.0"/>
   <object class="GtkAdjustment" id="adjustment-extra-size">
     <property name="lower">-100</property>
     <property name="upper">100</property>
@@ -9,407 +8,316 @@
     <property name="page_increment">5</property>
   </object>
   <object class="GtkNotebook" id="main">
-    <property name="visible">True</property>
-    <property name="can_focus">True</property>
     <child>
-      <object class="GtkGrid">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_left">10</property>
-        <property name="margin_right">10</property>
-        <property name="margin_top">10</property>
-        <property name="margin_bottom">10</property>
-        <property name="hexpand">True</property>
-        <property name="vexpand">True</property>
-        <property name="row_spacing">6</property>
-        <property name="column_spacing">10</property>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Clock position</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkComboBoxText" id="clock-position-combobox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="active_id">in-place</property>
-            <items>
-              <item id="after" translatable="yes">After</item>
-              <item id="before" translatable="yes">Before</item>
-              <item id="in-place" translatable="yes">In place</item>
-            </items>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Size to grow or shrink (px)</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkSpinButton" id="extra-size-spin">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="tooltip_text" translatable="yes">0 is same as other system icons</property>
-            <property name="width_chars">5</property>
-            <property name="xalign">1</property>
-            <property name="progress_pulse_step">1</property>
-            <property name="input_purpose">number</property>
-            <property name="adjustment">adjustment-extra-size</property>
-            <property name="climb_rate">1</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Show label on hover</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkSwitch" id="show-label-switch">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="tooltip_text" translatable="yes">Only applies to hour and minute hands</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Sweeping motion</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkSwitch" id="sweeping-motion-switch">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="tooltip_text" translatable="yes">Only applies to hour and minute hands</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Use theme colors</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">4</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkSwitch" id="use-theme-color-switch">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">4</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Face color</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">5</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkColorButton" id="face-color-picker">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">5</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Hour color</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkColorButton" id="hour-color-picker">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Minute color</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">7</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkColorButton" id="minute-color-picker">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">7</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="hexpand">True</property>
-            <property name="label" translatable="yes">Second color</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">8</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkColorButton" id="second-color-picker">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">8</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-    <child type="tab">
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Config</property>
-      </object>
-      <packing>
-        <property name="tab_fill">False</property>
-      </packing>
-    </child>
-    <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_left">10</property>
-        <property name="margin_right">10</property>
-        <property name="margin_top">10</property>
-        <property name="margin_bottom">10</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">4</property>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">&lt;b&gt;OClock&lt;/b&gt;</property>
-            <property name="use_markup">True</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">center</property>
-            <property name="spacing">3</property>
+      <object class="GtkNotebookPage">
+        <property name="child">
+          <object class="GtkGrid">
+            <property name="can_focus">0</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="hexpand">1</property>
+            <property name="vexpand">1</property>
+            <property name="row_spacing">6</property>
+            <property name="column_spacing">10</property>
             <child>
               <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Version:</property>
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Clock position</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="version-label">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">...</property>
+              <object class="GtkComboBoxText" id="clock-position-combobox">
+                <property name="can_focus">0</property>
+                <property name="active_id">in-place</property>
+                <items>
+                  <item id="after" translatable="yes">After</item>
+                  <item id="before" translatable="yes">Before</item>
+                  <item id="in-place" translatable="yes">In place</item>
+                </items>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">0</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
             </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">center</property>
-            <property name="spacing">3</property>
             <child>
               <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Maintanied by:</property>
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Size to grow or shrink (px)</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="maintainer-label">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">...</property>
+              <object class="GtkSpinButton" id="extra-size-spin">
+                <property name="tooltip_text" translatable="yes">0 is same as other system icons</property>
+                <property name="width_chars">5</property>
+                <property name="xalign">1</property>
+                <property name="adjustment">adjustment-extra-size</property>
+                <property name="climb_rate">1</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Show label on hover</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSwitch" id="show-label-switch">
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="tooltip_text" translatable="yes">Only applies to hour and minute hands</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Sweeping motion</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSwitch" id="sweeping-motion-switch">
+                <property name="tooltip_text" translatable="yes">Only applies to hour and minute hands</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Use theme colors</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSwitch" id="use-theme-color-switch">
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Face color</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkColorButton" id="face-color-picker">
+                <property name="receives_default">1</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Hour color</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">6</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkColorButton" id="hour-color-picker">
+                <property name="receives_default">1</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">6</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Minute color</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">7</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkColorButton" id="minute-color-picker">
+                <property name="receives_default">1</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">7</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="halign">start</property>
+                <property name="hexpand">1</property>
+                <property name="label" translatable="yes">Second color</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">8</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkColorButton" id="second-color-picker">
+                <property name="receives_default">1</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">8</property>
+                </layout>
+              </object>
             </child>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLinkButton" id="website-label">
-            <property name="label" translatable="yes">Website</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="relief">none</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-        <child>
+        </property>
+        <property name="tab">
           <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="valign">end</property>
-            <property name="label" translatable="yes">&lt;span size="small"&gt;This program comes with ABSOLUTELY NO WARRANTY.
-See the &lt;a href="https://www.gnu.org/licenses/gpl-3.0.html"&gt;GNU General Public License, version 3 or later&lt;/a&gt; for details.&lt;/span&gt;</property>
-            <property name="use_markup">True</property>
-            <property name="wrap">True</property>
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">Config</property>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-            <property name="position">4</property>
-          </packing>
-        </child>
+        </property>
       </object>
-      <packing>
-        <property name="position">1</property>
-      </packing>
     </child>
-    <child type="tab">
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">About</property>
-      </object>
-      <packing>
+    <child>
+      <object class="GtkNotebookPage">
         <property name="position">1</property>
-        <property name="tab_fill">False</property>
-      </packing>
+        <property name="child">
+          <object class="GtkBox">
+            <property name="can_focus">0</property>
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">4</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="label" translatable="yes">&lt;b&gt;OClock&lt;/b&gt;</property>
+                <property name="use_markup">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="can_focus">0</property>
+                <property name="halign">center</property>
+                <property name="spacing">3</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="can_focus">0</property>
+                    <property name="label" translatable="yes">Version:</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="version-label">
+                    <property name="can_focus">0</property>
+                    <property name="label" translatable="yes">...</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="can_focus">0</property>
+                <property name="halign">center</property>
+                <property name="spacing">3</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="can_focus">0</property>
+                    <property name="label" translatable="yes">Maintained by:</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="maintainer-label">
+                    <property name="can_focus">0</property>
+                    <property name="label" translatable="yes">...</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLinkButton" id="website-label">
+                <property name="label" translatable="yes">Website</property>
+                <property name="receives_default">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="can_focus">0</property>
+                <property name="valign">end</property>
+                <property name="vexpand">1</property>
+                <property name="label" translatable="yes">&lt;span size=&quot;small&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY.
+See the &lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;GNU General Public License, version 3 or later&lt;/a&gt; for details.&lt;/span&gt;</property>
+                <property name="use_markup">1</property>
+                <property name="wrap">1</property>
+              </object>
+            </child>
+          </object>
+        </property>
+        <property name="tab">
+          <object class="GtkLabel">
+            <property name="can_focus">0</property>
+            <property name="label" translatable="yes">About</property>
+          </object>
+        </property>
+      </object>
     </child>
   </object>
 </interface>

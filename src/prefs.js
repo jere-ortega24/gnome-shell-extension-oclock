@@ -110,7 +110,5 @@ this.buildPrefsWidget = () => {
     builder.get_object('maintainer-label').set_label(Me.metadata.author.toString());
     builder.get_object('website-label').set_uri(Me.metadata.url.toString());
 
-    const widget = builder.get_object('main');
-    widget.show_all();
-    return widget;
+    return builder.get_object('main');
 };
