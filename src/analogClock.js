@@ -82,6 +82,7 @@ class AnalogClock extends St.BoxLayout {
         settings.connect(`changed::${schema.KEYS.SWEEPING_MOTION}`, () => {
             this._analogClock._sweepingMotion
                 = settings.get_boolean(schema.KEYS.SWEEPING_MOTION);
+            this._analogClock.queue_repaint();
         });
         settingsDesktop.connect('changed::clock-show-seconds', () => {
             this._analogClock._showSeconds
@@ -91,22 +92,27 @@ class AnalogClock extends St.BoxLayout {
         settings.connect(`changed::${schema.KEYS.USE_THEME}`, () => {
             this._analogClock._useThemeColor
                 = settings.get_boolean(schema.KEYS.USE_THEME);
+            this._analogClock.queue_repaint();
         });
         settings.connect(`changed::${schema.KEYS.FACE_COLOR}`, () => {
             this._analogClock._faceColor
                 = this._getColorSetting(schema.KEYS.FACE_COLOR);
+            this._analogClock.queue_repaint();
         });
         settings.connect(`changed::${schema.KEYS.HOUR_COLOR}`, () => {
             this._analogClock._hourColor
                 = this._getColorSetting(schema.KEYS.HOUR_COLOR);
+            this._analogClock.queue_repaint();
         });
         settings.connect(`changed::${schema.KEYS.MINUTE_COLOR}`, () => {
             this._analogClock._minuteColor
                 = this._getColorSetting(schema.KEYS.MINUTE_COLOR);
+            this._analogClock.queue_repaint();
         });
         settings.connect(`changed::${schema.KEYS.SECOND_COLOR}`, () => {
             this._analogClock._secondColor
                 = this._getColorSetting(schema.KEYS.SECOND_COLOR);
+            this._analogClock.queue_repaint();
         });
 
         this._settings = settings;
